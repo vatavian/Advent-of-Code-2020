@@ -1,4 +1,4 @@
-# Advent of Code 2020 Day 1
+# Advent of Code 2020 Day 1 part 2
 
 def find_two_that_total(all, total)
   all.each do |entry1|
@@ -10,6 +10,7 @@ def find_two_that_total(all, total)
   end
 end
 
+# It is big-oh n-cubed, but good enough to get the right answer for AoC
 def find_three_that_total(all, total)
   all.each do |entry1|
     all.each do |entry2|
@@ -24,31 +25,14 @@ end
 
 all = [1721, 979, 366,299,675,1456]
 e1, e2, e3 = find_three_that_total(all, 2020)
-p e1 * e2 * e3
-#all.each do |entry1|
-#  all.each do |entry2|
-#    if entry1 + entry2 == 2020
-#      p entry1 * entry2
-#    end
-#  end
-#end
+p 'test answer: ' + (e1 * e2 * e3).to_s
 
 all = []
 File.open('1-input.txt') do |infile|
   while line = infile.gets
     all.append line.chomp.to_i
-#    num_modules += 1
   end
 end
 
 e1, e2, e3 = find_three_that_total(all, 2020)
-p e1 * e2 * e3
-#all.each do |entry1|
-#  all.each do |entry2|
-#    if entry1 + entry2 == 2020
-#      p entry1 * entry2
-#    end
-#  end
-#end
-
-#p 'Total ' + num_modules.to_s + ' modules is ' + total_fuel_needed.to_s
+p 'input file answer: ' + (e1 * e2 * e3).to_s
