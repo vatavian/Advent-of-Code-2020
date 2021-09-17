@@ -1,5 +1,5 @@
 # Advent of Code 2020
-My solutions for https://adventofcode.com/2020
+My solutions for https://adventofcode.com/2020/about
 
 Advent of Code is all about quickly coming up with the right answer to a complicated question.
 
